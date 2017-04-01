@@ -807,10 +807,11 @@ L.Control.Search = L.Control.extend({
 					this.showAlert();
 				else
 				{
-					this.showLocation(loc, this._input.value);
+					var title = this._input.value;
+					this.showLocation(loc, title);
 					this.fire('search:locationfound', {
 							latlng: loc,
-							text: this._input.value,
+							text: title,
 							layer: loc.layer ? loc.layer : null
 						});
 				}
